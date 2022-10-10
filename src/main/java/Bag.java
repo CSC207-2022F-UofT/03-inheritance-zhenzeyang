@@ -13,6 +13,10 @@ public abstract class Bag {
      *       - an int named capacity
      *       - an array of Strings named contents
      */
+    String color;
+    int numberOfContents;
+    int capacity;
+    String[] contents;
 
 
 
@@ -26,6 +30,36 @@ public abstract class Bag {
      * be empty (e.g. numberOfContents is 0 and an empty String array for
      * its contents.)
      */
+    public Silly(String color, int capacity) {
+        this.capacity = capacity;
+        this.color = color
+        public static void getColor() {
+        }
+        public static void getNumberOfContents() {
+        }
+        public static void getCapacity() {
+        }
+        public static void setColor() {
+            this.color = color;
+        }
+        public static void addItem(String item) {
+            if (this.numberOfContents < this.capacity){
+                this.numberOfContents += 1;
+                return true;
+            } else {
+                return false;
+            }
+        }
+        public static void popItem(String a) {
+            if (this.numberOfContents = 0){
+                return null
+            } else {
+                String s = String[-1];
+                this.contents.remove(-1);
+                this.numberOfContents -= 1;
+            }
+        }
+    }
 
 
 
@@ -37,7 +71,6 @@ public abstract class Bag {
      *           - getNumberOfContents
      *           - getCapacity
      */
-
 
 
 
@@ -87,7 +120,7 @@ public abstract class Bag {
      */
     public void increaseCapacity(int n) {
         // TODO: Implement this method.
-
+        this.capacity += n;
     }
 
     /**
