@@ -31,7 +31,7 @@ public abstract class Bag {
      * its contents.)
 
      */
-    public void Silly(String color, int capacity) {
+    public Bag(String color, int capacity) {
         this.capacity = capacity;
         this.color = color;
     }
@@ -62,8 +62,8 @@ public abstract class Bag {
      * TODO: Create a setter function called setColor which sets the
      *       color of this bag to the given color.
      */
-    public static void setColor() {
-        this.color = color;
+    public void setColor(String colour) {
+        this.color = colour;
     }
 
 
@@ -79,8 +79,13 @@ public abstract class Bag {
      *       This method should return true if the item was added
      *       and false otherwise.
      */
-    public static void addItem(String item) {
+    public boolean addItem(String item) {
         if (this.numberOfContents < this.capacity){
+            int i;
+            String newarr[] = new String[this.contents.length + 1];
+            for (i = 0; i < this.contents.length; i++)
+                newarr[i] = this.contents[i];
+            newarr[this.contents.length] = item;
             this.numberOfContents += 1;
             return true;
         } else {
@@ -101,13 +106,16 @@ public abstract class Bag {
      *
      * @return
      */
-    public static void popItem(String a) {
-        if (this.numberOfContents = 0){
+    public String popItem() {
+        if (this.numberOfContents == 0){
             return null;
         } else {
-            String s = String[-1];
-            this.contents.remove(-1);
-            this.numberOfContents -= 1;
+            String s = this.contents[-1];
+            int i;
+            String newarr[] = new String[this.contents.length - 1];
+            for (i = 0; i < this.contents.length; i++)
+                newarr[i] = this.contents[i];
+            return s;
         }
     }
 
