@@ -33,7 +33,7 @@
 public class CrossbodyBag extends Bag{
     int numberOfStraps;
     public CrossbodyBag(int numberOfStraps, String color, int capacity, int numberOfContents){
-        super(color, capacity, numberOfContents);
+        super(color, capacity);
         this.numberOfStraps = numberOfStraps;
     }
     public static void getNumberOfStraps() {

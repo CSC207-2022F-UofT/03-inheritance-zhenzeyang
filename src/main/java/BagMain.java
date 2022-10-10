@@ -16,9 +16,6 @@ class BagMain {
      */
     public static void enhanceBags(Bag[] bags, boolean double_enhance_handbags) {
         // TODO: Implement this.
-    }
-    public void enhance() {
-        super.increaseCapacity((int) 1);
         for (int i = 0; i < bags.length; i++) {
             bags[i].enhance();
         }
@@ -46,5 +43,6 @@ class BagMain {
                 total += ((CrossbodyBag) bags[i]).numberOfStraps;
             }
         }
+        return total;
     }
 }
